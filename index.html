@@ -7,8 +7,9 @@
   <body>
     <header class="main-header">
       <a class="logo">device</a>
-      <form>
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
         <input type="search" placeholder="Поиск по сайту">
+        <button class="search-button" type="submit" name="button">Искать</button>
       </form>
       <ul class="user-nav">
         <li>
@@ -71,7 +72,7 @@
         <ul>
           <li class="slides slide-1">
             <span class="slider-number">01</span>
-            <img src="img\slider-1.png" alt="Палка для селфи" width="384" height="486">
+            <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
             <p class="slider-lead">Делай селфи,<br>как Бен Стиллер!</p>
             <p class="slides-promo">
               Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -92,7 +93,7 @@
           </li>
           <li class="slides slide-2">
             <span class="slider-number">02</span>
-            <img src="img\slider-2.png" alt="Фитнес-браслет" width="345" height="485">
+            <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
             <p class="slider-lead">Худеем<br>правильно!</p>
             <p class="slides-promo">
               Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
@@ -109,7 +110,7 @@
           </li>
           <li class="slides slide-3">
             <span class="slider-number">03</span>
-            <img src="img\slider-3.png" alt="Квадрокоптер" width="526" height="334">
+            <img src="img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
             <p class="slider-lead">Порхает как бабочка,<br>жалит как пчела!</p>
             <p class="slides-promo">
               Этот обычный, на первый взгляд, квадрокоптер, оснащен мощным лазером, замаскированным под обычную камеру.
@@ -207,26 +208,26 @@
         <ul class="brand-list">
           <li>
             <a href="#" class="brand-item">
-              <img class="brand-logo" src="img\logo-1.png" alt="DJI" width="260" height="100">
-              <img class="brand-logo-hidden" src="img\logo-1_hover.png" alt="DJI" width="260" height="100">
+              <img class="brand-logo" src="img/logo-1.png" alt="DJI" width="260" height="100">
+              <img class="brand-logo-hidden" src="img/logo-1_hover.png" alt="DJI" width="260" height="100">
             </a>
           </li>
           <li>
             <a href="#" class="brand-item">
-              <img class="brand-logo" src="img\logo-2.png" alt="SP Gadgets" width="260" height="100">
-              <img class="brand-logo-hidden" src="img\logo-2_hover.png" alt="SP Gadgets" width="260" height="100">
+              <img class="brand-logo" src="img/logo-2.png" alt="SP Gadgets" width="260" height="100">
+              <img class="brand-logo-hidden" src="img/logo-2_hover.png" alt="SP Gadgets" width="260" height="100">
             </a>
           </li>
           <li>
             <a href="#" class="brand-item">
-              <img class="brand-logo" src="img\logo-3.png" alt="GoPro" width="260" height="100">
-              <img class="brand-logo-hidden" src="img\logo-3_hover.png" alt="GoPro" width="260" height="100">
+              <img class="brand-logo" src="img/logo-3.png" alt="GoPro" width="260" height="100">
+              <img class="brand-logo-hidden" src="img/logo-3_hover.png" alt="GoPro" width="260" height="100">
             </a>
           </li>
           <li>
             <a href="#" class="brand-item">
-              <img class="brand-logo" src="img\logo-4.png" alt="VIVE" width="260" height="100">
-              <img class="brand-logo-hidden" src="img\logo-4_hover.png" alt="VIVE" width="260" height="100">
+              <img class="brand-logo" src="img/logo-4.png" alt="VIVE" width="260" height="100">
+              <img class="brand-logo-hidden" src="img/logo-4_hover.png" alt="VIVE" width="260" height="100">
             </a>
           </li>
         </ul>
@@ -250,7 +251,7 @@
             <a href="#">ЖелДорЭкспедиция</a>
           </li>
         </ul>
-        <button class="popup-button" type="button">подробнее о нас</button>
+        <button class="popup-button" type="button">Подробнее о нас</button>
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
@@ -258,9 +259,9 @@
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
         <div class="contacts-map">
-          <img src="img\map.jpg" width="560" height="222" alt="Магазин Device на карте">
+          <img src="img/map.jpg" width="560" height="222" alt="Магазин Device на карте">
         </div>
-        <button class="popup-button" type="button">напишите нам</button>
+        <button class="popup-button" type="button">Напишите нам</button>
       </section>
     </main>
     <footer class="footer">
@@ -306,11 +307,21 @@
     </footer>
     <section class="modal-map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
-      <img class="map-big" src="img\map-big.jpg" width="960" height="559" alt="Магазин Device на карте">
+      <img class="map-big" src="img/map-big.jpg" width="960" height="559" alt="Магазин Device на карте">
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Всплывающая форма для обратной связи -->
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <label for="feedback-name">Ваше имя:</label>
+        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <label for="feedback-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        <label for="feedback-message">Текст письма:</label>
+        <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
