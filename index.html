@@ -179,15 +179,18 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
+        <input type="radio" class="services-control" name="services-switcher" id="delivery" checked>
+        <input type="radio" class="services-control" name="services-switcher" id="guarantee">
+        <input type="radio" class="services-control" name="services-switcher" id="credit">
         <ul class="services-buttons-list">
-          <li class="services-button">
-            <button type="button">доставка</button>
+          <li>
+            <label class="services-button" for="delivery">Доставка</label>
           </li>
-          <li class="services-button">
-            <button type="button">гарантия</button>
+          <li>
+            <label class="services-button" for="guarantee">Гарантия</label>
           </li>
-          <li class="services-button">
-            <button type="button">кредит</button>
+          <li>
+            <label class="services-button" for="credit">Кредит</label>
           </li>
         </ul>
         <ul class="services-list">

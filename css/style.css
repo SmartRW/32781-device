@@ -342,7 +342,7 @@ header
 }
 
 .categories-item-icon:hover,
-.categories-item-icon:focus
+a:focus .categories-item-icon
 {
   background-color: #f0c52e;
 }
@@ -350,5 +350,59 @@ header
 .categories-item a:active .categories-item-icon::before
 {
   content: "";
-  filter: opacity(30%);
+  opacity: 0.3;
+}
+
+.categories-item-name
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+a:active .categories-item-name
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.services
+{
+  background-image: linear-gradient(180deg, #ffffff 0, #ffffff 100px, #e5e5e5 100px, #e5e5e5 100%);
+}
+
+.services-buttons-list
+{
+  list-style: none;
+  border-right: 7px solid #000000;
+}
+
+.services-button
+{
+  display: block;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  background-image: linear-gradient(180deg, transparent 0, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+}
+
+.services-button:hover,
+.services-button:focus
+{
+  background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
+}
+
+#delivery:checked ~ .services-buttons-list li:nth-child(1) label,
+#guarantee:checked ~ .services-buttons-list li:nth-child(2) label,
+#credit:checked ~ .services-buttons-list li:nth-child(3) label
+{
+  color: #f7e184;
+  background-image: linear-gradient(180deg, #000000 0, #000000 100px);
 }
