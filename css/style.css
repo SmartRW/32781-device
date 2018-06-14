@@ -8,3 +8,165 @@ body
   line-height: 30px;
   color: #464646;
 }
+
+a
+{
+  text-decoration: none;
+}
+
+.main-header
+{
+  background-color: #f7e296;
+  color: #000000;
+}
+
+.header-logo,
+.footer-logo
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header-logo:hover,
+.header-logo:focus
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-logo:active
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo:hover,
+.footer-logo:focus
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-logo:active
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search
+{
+  background-color: #f7e296;
+  border-width: 0 0 2px 0;
+  border-bottom-style: solid;
+  border-color: #f7e296;
+  outline: none;
+}
+
+.site-search:focus
+{
+  border-bottom: 2px solid #000000;
+}
+
+.site-search:-ms-input-placeholder
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search::-ms-input-placeholder
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search::-webkit-input-placeholder,
+.site-search::placeholder
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search:hover::-ms-input-placeholder
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-search:hover::-webkit-input-placeholder,
+.site-search:hover::placeholder
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-button
+{
+  opacity: 0;
+  background-color: #f7e296;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+.search-button:hover
+{
+  opacity: 1;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.site-search:focus+.search-button,
+.search-button:focus
+{
+  opacity: 1;
+}
+
+.search-button:active
+{
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+}
+
+.user-nav,
+.order-nav,
+.header-services
+{
+  list-style: none;
+}
+
+.user-nav a,
+.order-nav a
+{
+  color: inherit;
+}
+
+.user-nav a:hover,
+.order-nav a:hover,
+.user-nav a:focus,
+.order-nav a:focus
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-nav a:active,
+.order-nav a:active,
+.user-nav .logout
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav-header,
+.contacts a,
+.header-services a
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.nav-column
+{
+  list-style: none;
+}
+
+.nav-column a
+{
+    color: inherit;
+}

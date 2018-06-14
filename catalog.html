@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <a href="index.html" class="logo">device</a>
-      <form>
-        <input type="search" placeholder="Поиск по сайту">
+      <a class="header-logo">Device</a>
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+        <input class="site-search" type="search" id="site-search" placeholder="Поиск по сайту" autocomplete="off"><!-- Убирает пробел между элементами
+        --><button class="search-button" type="submit" name="button">Найти</button>
       </form>
       <ul class="user-nav">
         <li>
           <a href="#">Валентин Петухов</a>
         </li>
         <li>
-          <a href="#">Выйти</a>
+          <a class="logout" href="#">Выйти</a>
         </li>
       </ul>
       <ul class="order-nav">
@@ -27,14 +32,14 @@
         </li>
       </ul>
       <nav class="main-nav">
-        <a class="main-nav-header" href="#">Каталог</a>
+        <a class="main-nav-header" href="#">Каталог товаров</a>
         <div class="main-nav-dropdown">
           <ul class="nav-column">
             <li>
               <a href="#">Виртуальная реальность</a>
             </li>
             <li>
-              <a>Моноподы для селфи</a>
+              <a href="catalog.html">Моноподы для селфи</a>
             </li>
             <li>
               <a href="#">Экшн-камеры</a>
@@ -67,21 +72,6 @@
         <a href="#">Контакты</a>
       </div>
     </header>
-    <main class="main">
-      <h1>Моноподы для селфи</h1>
-      <header class="breadcrumbs-header">
-        <ul class="breadcrumbs">
-          <li>
-            <a href="index.html">Главная</a>
-          </li>
-          <li>
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li>
-            <a>Моноподы для селфи</a>
-          </li>
-        </ul>
-      </header>
       <section class="sorting">
         <h2>Сортировка:</h2>
         <ul class="sorting-list">
