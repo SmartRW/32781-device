@@ -40,15 +40,12 @@ header
 }
 
 .inner-header .header-logo:hover,
-.inner-header .header-logo:focus,
-.footer-logo:hover,
-.footer-logo:focus
+.inner-header .header-logo:focus
 {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.inner-header .header-logo:active,
-.footer-logo:active
+.inner-header .header-logo:active
 {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -216,10 +213,9 @@ header
   color: #000000;
 }
 
-.slider-button
+.button
 {
   display: block;
-  width: 220px;
   height: 40px;
   text-align: center;
   vertical-align: middle;
@@ -229,7 +225,12 @@ header
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
-  background-image: linear-gradient(180deg, #ffffff 0, #ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px, #ffffff 40px);
+  background-image: linear-gradient(180deg, transparent 0, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+}
+
+.slider-button
+{
+  width: 220px;
 }
 
 .slider-button:hover,
@@ -347,7 +348,7 @@ a:focus .categories-item-icon
   background-color: #f0c52e;
 }
 
-.categories-item a:active .categories-item-icon::before
+a:active .categories-item-icon::before
 {
   content: "";
   opacity: 0.3;
@@ -371,6 +372,11 @@ a:active .categories-item-name
   background-image: linear-gradient(180deg, #ffffff 0, #ffffff 100px, #e5e5e5 100px, #e5e5e5 100%);
 }
 
+.services-control
+{
+  display: none;
+}
+
 .services-buttons-list
 {
   list-style: none;
@@ -379,18 +385,7 @@ a:active .categories-item-name
 
 .services-button
 {
-  display: block;
   width: 160px;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-  font-family: "gilroyextrabold", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 40px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  background-image: linear-gradient(180deg, transparent 0, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
 }
 
 .services-button:hover,
@@ -405,4 +400,281 @@ a:active .categories-item-name
 {
   color: #f7e184;
   background-image: linear-gradient(180deg, #000000 0, #000000 100px);
+}
+
+.services-list
+{
+  list-style: none;
+}
+
+.services-list h3
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.services-item
+{
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.services-item:nth-child(1)
+{
+  background-image: url("../img/delivery.svg");
+}
+
+.services-item:nth-child(2)
+{
+  background-image: url("../img/warranty.svg");
+}
+
+.services-item:nth-child(3)
+{
+  background-image: url("../img/credit.svg");
+}
+
+.brand-list
+{
+  list-style: none;
+}
+
+.brand-list li
+{
+  display: inline-block;
+  position: relative;
+  filter: grayscale(100%) opacity(20%);
+}
+
+.brand-list li:hover
+{
+  filter: none;
+}
+
+.about h2,
+.contacts h2
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.delivery-list
+{
+  list-style: none;
+}
+
+.delivery-list a
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.delivery-list a::before
+{
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 25px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.popup-button
+{
+  width: 260px;
+  background-color: transparent;
+  border: none;
+}
+
+.popup-button:hover,
+.popup-button:focus
+{
+  background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
+}
+
+.popup-button:active
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer
+{
+  background-color: #464646;
+}
+
+.footer-logo
+{
+  color: #ffc600;
+}
+
+.footer-user-nav,
+.footer-order-nav
+{
+  list-style: none;
+}
+
+.footer-logo:hover,
+.footer-logo:focus
+{
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.footer-logo:active
+{
+  color: rgba(255, 198, 0, 0.3);
+}
+
+.footer-user-nav a,
+.footer-order-nav a
+{
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.footer-user-nav a:hover,
+.footer-order-nav a:hover,
+.footer-user-nav a:focus,
+.footer-order-nav a:focus
+{
+  color: rgba(255, 255, 255, 1)
+}
+
+.footer-user-nav a:active,
+.footer-order-nav a:active
+{
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.footer-nav
+{
+  list-style: none;
+  text-align: center;
+}
+
+.footer-nav a
+{
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus
+{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nav a:active
+{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-address,
+.footer-phone
+{
+  color: #ffffff;
+}
+
+.social
+{
+  list-style: none;
+  text-align: center;
+}
+
+.social-item
+{
+  display: inline-block;
+}
+
+.social-item a
+{
+  display: inline-block;
+  font-size: 0;
+}
+
+.social-item:nth-child(1) a::before
+{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url("../img/fb.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-item:nth-child(2) a::before
+{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url("../img/instagram.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-item:nth-child(3) a::before
+{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: url("../img/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.social-item a:hover,
+.social-item a:focus
+{
+  opacity: 0.6;
+}
+
+.social-item a:active
+{
+  opacity: 0.1;
+}
+
+.footer-copyright
+{
+  display: inline-block;
+  font-size: 0;
+}
+
+.footer-copyright::before
+{
+  content: "";
+  display: block;
+  width: 27px;
+  height: 35px;
+  background-image: url("../img/logo-html.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-copyright:hover,
+.footer-copyright:focus
+{
+  opacity: 0.6;
+}
+
+.footer-copyright:active
+{
+  opacity: 0.3;
 }
