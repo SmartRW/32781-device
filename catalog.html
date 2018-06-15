@@ -72,41 +72,34 @@
         <a href="#">Контакты</a>
       </div>
     </header>
-      <section class="sorting">
-        <h2>Сортировка:</h2>
-        <ul class="sorting-list">
-          <li class="sorting-type">
-            <button type="button">По цене</button>
+    <main class="main">
+      <h1 class="product-page-header">Моноподы для селфи</h1>
+      <header class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a href="index.html">Главная</a>
           </li>
-          <li class="sorting-type">
-            <button type="button">По типу</button>
+          <li class="breadcrumbs-item">
+            <a href="#">Каталог товаров</a>
           </li>
-          <li class="sorting-type">
-            <button type="button">По популярности</button>
-          </li>
-        </ul>
-        <ul class="ranking-list">
-          <li class="ranking-asc">
-            <button type="button">По возрастанию</button>
-          </li>
-          <li class="ranking-desc">
-            <button type="button">По убыванию</button>
+          <li class="breadcrumbs-item breadcrumbs-item-current">
+            <a>Моноподы для селфи</a>
           </li>
         </ul>
-      </section>
+      </header>
       <section class="product-filter">
         <h2>Фильтр:</h2>
         <form class="side-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset>
             <legend>Стоимость</legend>
-            <div class="filter-slider">
-              <span></span>
-              <span></span>
+            <div class="filter-price">
+              <span>от 0</span>
+              <span>до 5000</span>
             </div>
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
-            <ul>
+            <ul class="color-checkbox-list">
               <li>
                 <input class="filter-checkbox" type="checkbox" name="black" id="filter-black" checked>
                 <label for="filter-black">Черный</label>
@@ -131,7 +124,7 @@
           </fieldset>
           <fieldset>
             <legend>Bluetooth</legend>
-            <ul>
+            <ul class="bluetooth-radio-list">
               <li>
                 <input class="filter-radio" type="radio" name="bluetooth" id="filter-bluetooth-yes" value="bluetooth-yes" checked>
                 <label for="filter-bluetooth-yes">Есть</label>
@@ -144,6 +137,28 @@
           </fieldset>
           <button class="button" type="submit">Показать</button>
         </form>
+      </section>
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <ul class="sorting-list">
+          <li class="sorting-type">
+            <button type="button">По цене</button>
+          </li>
+          <li class="sorting-type">
+            <button type="button">По типу</button>
+          </li>
+          <li class="sorting-type">
+            <button type="button">По популярности</button>
+          </li>
+        </ul>
+        <ul class="ranking-list">
+          <li class="ranking-asc">
+            <button type="button">По возрастанию</button>
+          </li>
+          <li class="ranking-desc">
+            <button type="button">По убыванию</button>
+          </li>
+        </ul>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Товары</h2>
@@ -236,28 +251,48 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="footer-logo" href="index.html">device</a>
-      <ul class="user-nav">
-        <li><a href="#">Валентин Петухов</a></li>
-        <li><a href="#">Выйти</a></li>
+      <a class="footer-logo" href="#">Device</a>
+      <ul class="footer-user-nav">
+        <li>
+          <a href="#">Валентин Петухов</a>
+        </li>
+        <li>
+          <a class="logout" href="#">Выйти</a>
+        </li>
       </ul>
-      <ul class="order-nav">
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+      <ul class="footer-order-nav">
+        <li>
+          <a href="#">Сравнить</a>
+        </li>
+        <li>
+          <a href="#">Корзина</a>
+        </li>
       </ul>
       <p class="footer-address">г. Москва, ул. Строителей, 15</p>
       <ul class="footer-nav">
-        <li><a href="#">доставка</a></li>
-        <li><a href="#">гарантия</a></li>
-        <li><a href="#">контакты</a></li>
+        <li>
+          <a href="#">Доставка</a>
+        </li>
+        <li>
+          <a href="#">Гарантия</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
       </ul>
       <a href="tel:+74954959595" class="footer-phone">Тел.: +7 (495) 495-95-95</a>
       <ul class="social">
-        <li class="social-item"><a href="">Facebook</a></li>
-        <li class="social-item"><a href="">Instagram</a></li>
-        <li class="social-item"><a href="">Twitter</a></li>
+        <li class="social-item">
+          <a href="#">Facebook</a>
+        </li>
+        <li class="social-item">
+          <a href="#">Instagram</a>
+        </li>
+        <li class="social-item">
+          <a href="#">Twitter</a>
+        </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" title="Сделано в HTML-Academy">Сделано в HTML-Academy</a>
+      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss" title="Сделано в HTML-Academy">Сделано в HTML-Academy</a>
     </footer>
   </body>
 </html>
