@@ -319,14 +319,14 @@
     </section>
     <section class="modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="feedback-name">Ваше имя:</label>
-        <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <input class="feedback-name" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
         <label for="feedback-email">Ваш e-mail:</label>
-        <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        <input class="feedback-email" type="email" name="email" id="feedback-email" placeholder="email@example.com">
         <label for="feedback-message">Текст письма:</label>
-        <textarea name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
-        <button class="button" type="submit">Отправить</button>
+        <textarea class="feedback-message" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="feedback-button button" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
