@@ -912,6 +912,82 @@ a:active .categories-item-name
   color: #000000;
 }
 
+.color-checkbox-list input:checked+label::before
+{
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.color-checkbox-list input:not(:checked)+label::before
+{
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.color-checkbox-list label:hover,
+.color-checkbox-list label:focus
+{
+  opacity: 0.6;
+}
+
+.color-checkbox-list label:active
+{
+  opacity: 1;
+}
+
+.color-checkbox-list  input:disabled+label
+{
+  opacity: 0.25;
+}
+
+.bluetooth-radio-list input:checked+label::before
+{
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-on.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bluetooth-radio-list input:not(:checked)+label::before
+{
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bluetooth-radio-list label:hover,
+.bluetooth-radio-list label:focus
+{
+  opacity: 0.6;
+}
+
+.bluetooth-radio-list label:active
+{
+  opacity: 1;
+}
+
+.bluetooth-radio-list  input:disabled+label
+{
+  opacity: 0.25;
+}
+
 .filter-button
 {
   width: 200px;
@@ -1085,4 +1161,84 @@ a.ranking-current:active
 .item-action-compare button:active
 {
   color: rgba(0, 0, 0, 0.2);
+}
+
+.new-item-label
+{
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 60px;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+/* Стили пагинации  */
+
+.pagination
+{
+  background-color: #ebebeb;
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination a
+{
+  color: inherit;
+}
+
+.pagination-forward:hover,
+.pagination-back:hover,
+.pagination-forward:focus,
+.pagination-back:focus
+{
+  background-color: #d9d9d9;
+}
+
+.pagination-forward:active,
+.pagination-back:active
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-pages
+{
+  list-style: none;
+}
+
+.pagination-pages a
+{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-pages a:hover,
+.pagination-pages a:focus
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-pages a:active
+{
+  color: rgba(0, 0, 0, 1);
+}
+
+a.page-current
+{
+  color: #000000;
+  cursor: default;
+}
+
+a.page-current:hover,
+a.page-current:focus
+{
+  color: #000000;
 }
