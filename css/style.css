@@ -419,6 +419,13 @@ a:active .categories-item-name
   list-style: none;
 }
 
+#delivery:checked ~ .services-list .services-item:nth-child(1),
+#guarantee:checked ~ .services-list .services-item:nth-child(2),
+#credit:checked ~ .services-list .services-item:nth-child(3)
+{
+  display: block;
+}
+
 .services-list h3
 {
   font-family: "gilroyextrabold", "Arial", sans-serif;
@@ -429,6 +436,7 @@ a:active .categories-item-name
 
 .services-item
 {
+  display: none;
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -614,7 +622,7 @@ a:active .categories-item-name
 
 .social-item a
 {
-  display: block;  
+  display: block;
 }
 
 .social-item:nth-child(1) a::before
