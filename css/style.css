@@ -614,8 +614,7 @@ a:active .categories-item-name
 
 .social-item a
 {
-  display: inline-block;
-  font-size: 0;
+  display: block;  
 }
 
 .social-item:nth-child(1) a::before
