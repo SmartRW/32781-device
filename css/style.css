@@ -191,6 +191,44 @@ a
 
 /* Стили слайдера */
 
+.slider-control
+{
+  display: none;
+}
+
+.slider-label-list
+{
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  list-style: none;
+}
+
+.slider-label label
+{
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#control-1:checked ~ .slider-label-list li:nth-child(1) label,
+#control-2:checked ~ .slider-label-list li:nth-child(2) label,
+#control-3:checked ~ .slider-label-list li:nth-child(3) label
+{
+  /* Заменить на radial-gradient */
+  background-image: radial-gradient(transparent 1px, #000000 1px, #000000 2px, transparent 2px, transparent 100%);
+}
+
+#control-1:checked ~ .slides-list .slide-1,
+#control-2:checked ~ .slides-list .slide-2,
+#control-3:checked ~ .slides-list .slide-3
+{
+  display: block;
+}
+
 .slides-list
 {
   list-style: none;
@@ -198,6 +236,7 @@ a
 
 .slides
 {
+  display: none;
   background-image: linear-gradient(180deg, #f7e296 0px, #f7e296 113px, #ffffff 113px, #ffffff 100%);
 }
 
