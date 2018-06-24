@@ -1,9 +1,3 @@
-/* Вспомогательный класс, убрать после верстки */
-.show
-{
-  outline: 1px solid tomato;
-}
-
 .visually-hidden
 {
   position: absolute;
@@ -336,12 +330,6 @@ img
   background-color: #f7e296;
 }
 
-.catalog-container
-{
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .nav-column
 {
   margin: 0;
@@ -406,13 +394,6 @@ img
   border: 1px solid #000000;
   border-radius: 50%;
   cursor: pointer;
-}
-
-#control-1:focus ~ .slider-label-list li label[for="control-1"],
-#control-2:focus ~ .slider-label-list li label[for="control-2"],
-#control-3:focus ~ .slider-label-list li label[for="control-3"]
-{
-  box-shadow: 0 0 0 3px #ffc600;
 }
 
 #control-1:checked ~ .slider-label-list li label[for="control-1"],
@@ -704,13 +685,6 @@ a:active .categories-item-name
 .services-button:focus
 {
   background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
-}
-
-#delivery:focus ~ .services-buttons-list .services-button-delivery label,
-#guarantee:focus ~ .services-buttons-list .services-button-guarantee label,
-#credit:focus ~ .services-buttons-list .services-button-credit label
-{
-  box-shadow: 0 0 0 3px #ffc600;
 }
 
 #delivery:checked ~ .services-buttons-list .services-button-delivery label,
@@ -1472,6 +1446,7 @@ a:active .categories-item-name
 {
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 .product-filter
@@ -1480,7 +1455,7 @@ a:active .categories-item-name
   flex-direction: column;
   flex-grow: 1;
   align-items: flex-end;
-  flex-basis: 330px;
+  flex-basis: 328px;
   background-color: #eeeeee;
 }
 
@@ -1490,12 +1465,7 @@ a:active .categories-item-name
   flex-wrap: wrap;
   flex-direction: column;
   flex-grow: 1;
-  flex-basis: 830px;
-}
-
-.sorting
-{
-  background-color: #eeeeee;
+  flex-basis: 832px;
 }
 
 .product-filter h2,
@@ -1524,14 +1494,14 @@ a:active .categories-item-name
 
 .product-filter-header span
 {
-  width: 270px;
+  width: 268px;
 }
 
 .side-filter
 {
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: 268px;
   padding-top: 69px;
 }
 
@@ -1765,6 +1735,21 @@ a:active .categories-item-name
 
 /* Стили раздела сортировки */
 
+.sorting
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 70px;
+  padding-left: 73px;
+  background-color: #eeeeee;
+}
+
+.sorting h2
+{
+  margin-right: 55px;
+}
+
 .sorting-list
 {
   display: flex;
@@ -1772,6 +1757,11 @@ a:active .categories-item-name
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.sorting-type
+{
+  margin-right: 28px;
 }
 
 .sorting-type a
@@ -1806,6 +1796,7 @@ a.sorting-button-current:active
 .ranking-list
 {
   margin: 0;
+  margin-left: 203px;
   padding: 0;
   list-style: none;
 }
@@ -1813,6 +1804,11 @@ a.sorting-button-current:active
 .ranking-list li
 {
   display: inline-block;
+}
+
+.ranking-asc
+{
+  margin-right: 15px;
 }
 
 .ranking-asc a,
@@ -1862,9 +1858,36 @@ a.ranking-current:active
 
 /* Стили карточки товара */
 
+.catalog
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 760px;
+  padding-top: 58px;
+  padding-left: 72px;
+}
+
 .products-list
 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.products-item
+{
+  position: relative;
+  margin-bottom: 13px;
+  margin-top: 10px;
+}
+
+.products-item:hover .item-container
+{
+  visibility: visible;
+  cursor: pointer;
 }
 
 .products-item img
@@ -1872,8 +1895,18 @@ a.ranking-current:active
   background-color: #efefef;
 }
 
+.product-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 23px 0;
+}
+
 .item-name
 {
+  width: 260px;
+  margin: 0;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1883,20 +1916,41 @@ a.ranking-current:active
 
 .item-price
 {
+  margin-left: auto;
   font-family: "gilroylight", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0.1em;
   color: #464646;
+}
+
+.item-container
+{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 380px;
+  padding-top: 171px;
+  background-color: rgba(238, 238, 238, 0.7);
 }
 
 .item-action
 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .buy-button
 {
   width: 200px;
+  margin-bottom: 5px;
 }
 
 .buy-button:hover,
@@ -1936,10 +1990,12 @@ a.ranking-current:active
 
 .new-item-label
 {
-  display: block;
+  position: absolute;
+  top: 29px;
+  right: 26px;
   text-align: center;
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   font-family: "gilroyextrabold", "Arial", sans-serif;
@@ -1956,9 +2012,14 @@ a.ranking-current:active
 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 68px;
   background-color: #ebebeb;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.2em;
   color: #000000;
   text-transform: uppercase;
@@ -1967,6 +2028,12 @@ a.ranking-current:active
 .pagination a
 {
   color: inherit;
+}
+
+.pagination-forward,
+.pagination-back
+{
+  padding: 25px 30px;
 }
 
 .pagination-forward:hover,
@@ -1987,6 +2054,8 @@ a.ranking-current:active
 {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 90px;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
