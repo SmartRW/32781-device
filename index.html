@@ -9,69 +9,73 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="header-logo">Device</a>
-      <div class="container">
-        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="visually-hidden" for="site-search">Поиск по сайту</label>
-          <input class="site-search" type="search" id="site-search" placeholder="Поиск по сайту" autocomplete="off"><!--Убирает отступ между элементами формы
-          --><button class="search-button" type="submit" name="button">Найти</button>
-        </form>
-        <ul class="user-nav">
-          <li class="user-nav-login">
-            <a href="#">Войти</a>
-          </li>
-        </ul>
-        <ul class="order-nav">
-          <li class="order-nav-compare">
-            <a href="#">Сравнить</a>
-          </li>
-          <li class="order-nav-cart">
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      <div class="container">
-        <nav class="main-nav">
-          <a class="main-nav-header" href="#">Каталог товаров</a>
-          <div class="main-nav-dropdown">
-            <ul class="nav-column">
-              <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-            <ul class="nav-column">
-              <li>
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="nav-column">
-              <li>
-                <a href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+      <div class="header-wrapper">
+        <a class="header-logo">Device</a>
+        <div class="container">
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+            <input class="site-search" type="search" id="site-search" placeholder="Поиск по сайту" autocomplete="off"><!--Убирает отступ между элементами формы
+            --><button class="search-button" type="submit" name="button">Найти</button>
+          </form>
+          <ul class="user-nav">
+            <li class="user-nav-login">
+              <a href="#">Войти</a>
+            </li>
+          </ul>
+          <ul class="order-nav">
+            <li class="order-nav-compare">
+              <a href="#">Сравнить</a>
+            </li>
+            <li class="order-nav-cart">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="main-nav-header">
+            <a href="#">Каталог товаров</a>
           </div>
-        </nav>
-        <ul class="header-services">
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Гарантия</a>
-          </li>
-        </ul>
-        <div class="header-contacts">
-          <a href="#">Контакты</a>
+          <ul class="header-services">
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+          </ul>
+          <div class="header-contacts">
+            <a href="#">Контакты</a>
+          </div>
         </div>
       </div>
+      <nav class="main-nav">
+        <div class="catalog-container">
+          <ul class="nav-column">
+            <li>
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="#">Экшн-камеры</a>
+            </li>
+          </ul>
+          <ul class="nav-column">
+            <li>
+              <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li>
+              <a href="#">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="nav-column">
+            <li>
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин гаждетов Девайс</h1>
@@ -166,7 +170,7 @@
             </a>
           </li>
           <li class="categories-item">
-            <a class="categories-icon icon-monopod" href="#">
+            <a class="categories-icon icon-monopod" href="catalog.html">
               <span class="categories-item-name">Моноподы для&nbsp;селфи</span>
             </a>
           </li>

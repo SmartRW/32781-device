@@ -51,13 +51,17 @@ img
 .main-header,
 .inner-header
 {
+  position: relative;
   width: 1160px;
   min-height: 206px;
-  box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 58px 35px;
   background-image: linear-gradient(180deg, transparent 0, transparent 20px, #f7e296 20px, #f7e296 100%);
   color: #000000;
+}
+
+.header-wrapper
+{
+  padding: 0 58px;
 }
 
 .header-logo,
@@ -271,19 +275,6 @@ img
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-nav
-{
-  position: relative;
-  margin-right: auto;
-}
-
-.main-nav-dropdown
-{
-  position: absolute;
-  display: none;
-  background-color: #f7e296;
-}
-
 .header-services
 {
   display: flex;
@@ -300,7 +291,7 @@ img
   text-align: right;
 }
 
-.main-nav-header,
+.main-nav-header a,
 .header-contacts a,
 .header-services a
 {
@@ -314,10 +305,12 @@ img
 
 .main-nav-header
 {
+  position: relative;
   padding-right: 30px;
+  margin-right: auto;
 }
 
-.main-nav-header::after
+.main-nav-header a::after
 {
   content: "";
   position: absolute;
@@ -331,26 +324,51 @@ img
   opacity: 0.3;
 }
 
+.main-nav
+{
+  visibility: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px;
+  padding: 18px 60px;
+  z-index: 10;
+  background-color: #f7e296;
+}
+
+.catalog-container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-column
+{
+  margin: 0;
+  padding: 0;
+  padding-right: 59px;
+  list-style: none;
+  line-height: 36px;
+}
+
 .main-nav a:hover,
+.main-nav-header a:hover,
 .header-contacts a:hover,
 .header-services a:hover,
 .main-nav a:focus,
+.main-nav-header a:focus,
 .header-contacts a:focus,
 .header-services a:focus
 {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.main-nav a:active,
+.main-nav a:focus,
+.main-nav-header a:active,
 .header-contacts a:active,
 .header-services a:active
 {
   color: rgba(0, 0, 0, 0.3);
-}
-
-.nav-column
-{
-  list-style: none;
 }
 
 .nav-column a
@@ -829,8 +847,7 @@ a:active .categories-item-name
 }
 
 .about h2,
-.contacts h2,
-.product-page-header
+.contacts h2
 {
   margin: 0;
   margin-bottom: 45px;
@@ -945,6 +962,11 @@ a:active .categories-item-name
   margin-left: 37px;
 }
 
+.footer-nav-logout
+{
+  padding-left: 25px;
+}
+
 .footer-nav-login a::before
 {
   content: "";
@@ -1005,6 +1027,11 @@ a:active .categories-item-name
 .footer-order-nav a
 {
   color: rgba(255, 255, 255, 0.7)
+}
+
+.footer-nav-logout a
+{
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-user-nav a:hover,
@@ -1364,8 +1391,31 @@ a:active .categories-item-name
 
 /* Хлебные крошки */
 
+.breadcrumbs-wrapper
+{
+  box-sizing: border-box;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 38px 60px;
+}
+
+.product-page-header
+{
+  margin: 0;
+  margin-bottom: 19px;
+  font-family: "gilroyextrabold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
 .breadcrumbs-list
 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1408,6 +1458,7 @@ a:active .categories-item-name
   display: inline-block;
   width: 4px;
   height: 9px;
+  margin: 0 14px;
   vertical-align: middle;
   background-image: url("../img/nav-arrow.svg");
   background-position: top;
@@ -1416,7 +1467,22 @@ a:active .categories-item-name
 
 /* Стили фильтра продукта */
 
-.product-filter,
+.product-filter
+{
+  flex-basis: 330px;
+  margin-left: auto;
+  background-color: #eeeeee;
+}
+
+.catalog-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 830px;
+  margin-right: auto;
+}
+
 .sorting
 {
   background-color: #eeeeee;
@@ -1425,6 +1491,8 @@ a:active .categories-item-name
 .product-filter h2,
 .sorting h2
 {
+  margin: 0;
+  padding: 0;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -1571,8 +1639,12 @@ a:active .categories-item-name
 
 /* Стили раздела сортировки */
 
-.sorting ul
+.sorting-list
 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1603,6 +1675,13 @@ a.sorting-button-current:active
 {
   color: rgba(0, 0, 0, 1);
   cursor: default;
+}
+
+.ranking-list
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .ranking-list li
@@ -1749,6 +1828,8 @@ a.ranking-current:active
 
 .pagination
 {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #ebebeb;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 16px;
@@ -1778,7 +1859,16 @@ a.ranking-current:active
 
 .pagination-pages
 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.pagination-forward
+{
+  order: 1;
 }
 
 .pagination-pages a
