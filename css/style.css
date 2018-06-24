@@ -1396,6 +1396,7 @@ a:active .categories-item-name
   box-sizing: border-box;
   width: 1160px;
   margin: 0 auto;
+  margin-bottom: 6px;
   padding: 38px 60px;
 }
 
@@ -1467,10 +1468,19 @@ a:active .categories-item-name
 
 /* Стили фильтра продукта */
 
+.catalog-wrapper
+{
+  display: flex;
+  justify-content: center;
+}
+
 .product-filter
 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
   flex-basis: 330px;
-  margin-left: auto;
   background-color: #eeeeee;
 }
 
@@ -1479,8 +1489,8 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  flex-grow: 1;
   flex-basis: 830px;
-  margin-right: auto;
 }
 
 .sorting
@@ -1503,40 +1513,140 @@ a:active .categories-item-name
 
 .product-filter h2
 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 70px;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #dbdbdb;
+}
+
+.product-filter-header span
+{
+  width: 270px;
+}
+
+.side-filter
+{
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  padding-top: 69px;
 }
 
 .side-filter ul
 {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .side-filter legend
 {
+  width: 200px;
+  padding-top: 10px;
+  border-top: 2px solid #000000;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.01em;
   color: #000000;
-  border-top: 2px solid #000000;
 }
 
 .side-filter fieldset
 {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
   border: none;
 }
 
-.filter-price span
+.filter-price legend
 {
+  margin-bottom: 35px;
+}
+
+.price-range
+{
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.price-range::before
+{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: #dbdbdb;
+}
+
+.price-range::after
+{
+  position: absolute;
+  content: "";
+  display: block;
+  width: 117px;
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.min-price
+{
+  position: absolute;
+  z-index: 1;
+  left: -6px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: radial-gradient(#ababab 0, #ababab 2px, #ffffff 2px, #ffffff 100%);
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.max-price
+{
+  position: absolute;
+  z-index: 1;
+  left: 107px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: radial-gradient(#ababab 0, #ababab 2px, #ffffff 2px, #ffffff 100%);
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.price-range-figure
+{
+  margin-right: 58px;
   font-family: "gilroylight", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.2);
 }
 
+.filter-color legend
+{
+  margin-bottom: 18px;
+}
+
+.color-checkbox-list label
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .color-checkbox-list label,
 .bluetooth-radio-list label
 {
+  position: relative;
+  padding-left: 37px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -1548,7 +1658,8 @@ a:active .categories-item-name
 .color-checkbox-list input:checked+label::before
 {
   content: "";
-  display: inline-block;
+  position:absolute;
+  left: -2px;
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-on.svg);
@@ -1559,7 +1670,8 @@ a:active .categories-item-name
 .color-checkbox-list input:not(:checked)+label::before
 {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: -2px;
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-off.svg);
@@ -1583,10 +1695,23 @@ a:active .categories-item-name
   opacity: 0.25;
 }
 
+.filter-bluetooth legend
+{
+  margin-bottom: 17px;
+}
+
+.bluetooth-radio-list label
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .bluetooth-radio-list input:checked+label::before
 {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: -2px;
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-on.svg);
@@ -1597,7 +1722,8 @@ a:active .categories-item-name
 .bluetooth-radio-list input:not(:checked)+label::before
 {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: -2px;
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-off.svg);
