@@ -47,6 +47,7 @@ img
 {
   position: relative;
   width: 1160px;
+  height: 206px;
   min-height: 206px;
   margin: 0 auto;
   background-image: linear-gradient(180deg, transparent 0, transparent 20px, #f7e296 20px, #f7e296 100%);
@@ -164,6 +165,11 @@ img
   background-color: #f7e296;
   border: 2px solid #000000;
   color: #000000;
+}
+
+.search-button:active span
+{
+  position: relative;
 }
 
 .search-button:hover
@@ -337,6 +343,7 @@ img
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 1160px;
+  height: 160px;
   min-height: 160px;
   padding: 18px 60px;
   z-index: 10;
@@ -439,6 +446,7 @@ img
 .slides
 {
   display: none;
+  height: 490px;
   min-height: 490px;
   background-image: linear-gradient(180deg, #f7e296 0px, #f7e296 113px, #ffffff 113px, #ffffff 100%);
 }
@@ -514,6 +522,12 @@ img
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.button:active span,
+.compare-button:active span
+{
+  position: relative; /* Убирает смещение текста в IE11 */
 }
 
 .slider-button
@@ -666,6 +680,7 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   width: 1160px;
+  height: 320px;
   min-height: 320px;
   margin: 0 auto;
 }
@@ -783,14 +798,13 @@ a:active .categories-item-name
   background-image: linear-gradient(180deg, #e5e5e5 0, #e5e5e5 67px, #ffffff 70px, #ffffff 100%);
 }
 
-
-
 .brand-list
 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 1160px;
+  height: 271px; /* Для IE11 */
   min-height: 271px;
   margin: 0 auto;
   padding: 0 10px;
@@ -1277,6 +1291,7 @@ a:active .categories-item-name
   padding-left: 100px;
   padding-right: 100px;
   width: 960px;
+  height: 553px;
   min-height: 553px;
   bottom: 100px;
   left: calc(50% - 480px);
@@ -1520,6 +1535,7 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  height: 70px;
   min-height: 70px;
   justify-content: flex-end;
   align-items: center;
@@ -1775,6 +1791,7 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: 70px;
   min-height: 70px;
   padding-left: 73px;
   background-color: #eeeeee;
@@ -2008,7 +2025,7 @@ a.ranking-current:active
   color: rgba(0, 0, 0, 0.3);
 }
 
-.item-action-compare button
+.compare-button
 {
   padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -2022,13 +2039,13 @@ a.ranking-current:active
   cursor: pointer;
 }
 
-.item-action-compare button:hover,
-.item-action-compare button:focus
+.compare-button:hover,
+.compare-button:focus
 {
   color: rgba(0, 0, 0, 1);
 }
 
-.item-action-compare button:active
+.compare-button:active
 {
   color: rgba(0, 0, 0, 0.2);
 }
