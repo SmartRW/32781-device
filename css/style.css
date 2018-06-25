@@ -799,12 +799,26 @@ a:active .categories-item-name
 
 .brand-list li
 {
-  filter: grayscale(100%) opacity(20%);
+  position: relative;
 }
 
-.brand-list li:hover
+.brand-list a:hover .brand-logo
 {
-  filter: none;
+  visibility: hidden;
+}
+
+.brand-list a:hover .brand-logo-hidden
+{
+  visibility: visible;
+}
+
+.brand-logo-hidden
+{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 /* Разделы О нас, Контакты */
