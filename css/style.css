@@ -343,7 +343,8 @@ img
   background-color: #f7e296;
 }
 
-.main-nav-header:hover .main-nav
+.main-nav-header:hover .main-nav,
+.nav-header:focus ~ .main-nav
 {
   visibility: visible;
 }
