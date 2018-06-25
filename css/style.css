@@ -1745,6 +1745,14 @@ a:active .categories-item-name
   background-color: #eeeeee;
 }
 
+.sorting-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 760px;
+  align-items: center;
+}
+
 .sorting h2
 {
   margin-right: 55px;
@@ -1796,7 +1804,7 @@ a.sorting-button-current:active
 .ranking-list
 {
   margin: 0;
-  margin-left: 203px;
+  margin-left: auto;
   padding: 0;
   list-style: none;
 }
