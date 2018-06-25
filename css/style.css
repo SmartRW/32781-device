@@ -285,7 +285,7 @@ img
   text-align: right;
 }
 
-.main-nav-header a,
+.nav-header,
 .header-contacts a,
 .header-services a
 {
@@ -304,7 +304,7 @@ img
   margin-right: auto;
 }
 
-.main-nav-header a::after
+.nav-header::after
 {
   content: "";
   position: absolute;
@@ -322,12 +322,20 @@ img
 {
   visibility: hidden;
   position: absolute;
+  left: -58px;
+  display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
-  width: 100%;
+  width: 1160px;
   min-height: 160px;
   padding: 18px 60px;
   z-index: 10;
   background-color: #f7e296;
+}
+
+.main-nav-header:hover .main-nav
+{
+  visibility: visible;
 }
 
 .nav-column
@@ -1088,6 +1096,8 @@ a:active .categories-item-name
 
 .decoration-container
 {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
