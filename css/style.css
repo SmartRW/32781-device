@@ -1,3 +1,8 @@
+.show
+{
+  outline: 1px dashed skyblue;
+}
+
 .visually-hidden
 {
   position: absolute;
@@ -37,7 +42,6 @@ a
 img
 {
   max-width: 100%;
-  height: auto;
 }
 
 /* Стили шапки */
@@ -453,6 +457,8 @@ img
 
 .slides img
 {
+  max-width: 560px;
+  max-height: 490px;
   margin: auto;
 }
 
@@ -956,6 +962,11 @@ a:active .categories-item-name
   padding: 65px 0;
 }
 
+.footer-nav-container
+{
+  margin-bottom: 54px;
+}
+
 .container
 {
   display: flex;
@@ -1074,7 +1085,6 @@ a:active .categories-item-name
   margin: 0;
   margin-right: auto;
   margin-left: 160px;
-  margin-bottom: 54px;
   padding: 5px;
   list-style: none;
   text-align: center;
@@ -1119,18 +1129,6 @@ a:active .categories-item-name
   letter-spacing: normal;
 }
 
-.social
-{
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  margin-left: 430px;
-  margin-right: auto;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
 .decoration-container
 {
   display: flex;
@@ -1141,9 +1139,19 @@ a:active .categories-item-name
 .decoration-container::before
 {
   content: "";
-  display: block;
   width: 80px;
+  margin-right: 430px;
   border-top: 7px solid #ffc600;
+}
+
+.social
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  list-style: none;
 }
 
 .social-item
@@ -1206,12 +1214,6 @@ a:active .categories-item-name
   opacity: 0.1;
 }
 
-.footer-copyright
-{
-  display: inline-block;
-  font-size: 0;
-}
-
 .footer-copyright::before
 {
   content: "";
@@ -1221,6 +1223,7 @@ a:active .categories-item-name
   background-image: url("../img/logo-html.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 27px 35px;
 }
 
 .footer-copyright:hover,
@@ -1590,7 +1593,8 @@ a:active .categories-item-name
 .price-range
 {
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
+  border: 1px solid transparent; /*Для восприятия маргина IE11*/
 }
 
 .price-range::before
@@ -1655,13 +1659,6 @@ a:active .categories-item-name
   margin-bottom: 18px;
 }
 
-.color-checkbox-list label
-{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 .color-checkbox-list label,
 .bluetooth-radio-list label
 {
@@ -1675,11 +1672,12 @@ a:active .categories-item-name
   color: #000000;
 }
 
-.color-checkbox-list input:checked+label::before
+.filter-checkbox:checked+label::before
 {
   content: "";
   position:absolute;
   left: -2px;
+  top: -3px;
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
@@ -1687,16 +1685,23 @@ a:active .categories-item-name
   background-repeat: no-repeat;
 }
 
-.color-checkbox-list input:not(:checked)+label::before
+.filter-checkbox:not(:checked)+label::before
 {
   content: "";
   position: absolute;
   left: -2px;
+  top: -3px;
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
   background-position: left;
   background-repeat: no-repeat;
+}
+
+.filter-checkbox:focus+label::before,
+.filter-radio:focus+label::before
+{
+  outline: 2px solid #4D90FE;
 }
 
 .color-checkbox-list label:hover,
@@ -1710,7 +1715,7 @@ a:active .categories-item-name
   opacity: 1;
 }
 
-.color-checkbox-list  input:disabled+label
+.filter-checkbox:disabled+label
 {
   opacity: 0.25;
 }
@@ -1720,18 +1725,12 @@ a:active .categories-item-name
   margin-bottom: 17px;
 }
 
-.bluetooth-radio-list label
-{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.bluetooth-radio-list input:checked+label::before
+.filter-radio:checked+label::before
 {
   content: "";
   position: absolute;
   left: -2px;
+  top: -3px;
   width: 25px;
   height: 25px;
   background-image: url("../img/radio-on.svg");
@@ -1739,11 +1738,12 @@ a:active .categories-item-name
   background-repeat: no-repeat;
 }
 
-.bluetooth-radio-list input:not(:checked)+label::before
+.filter-radio:not(:checked)+label::before
 {
   content: "";
   position: absolute;
   left: -2px;
+  top: -3px;
   width: 25px;
   height: 25px;
   background-image: url("../img/radio-off.svg");
@@ -1762,7 +1762,7 @@ a:active .categories-item-name
   opacity: 1;
 }
 
-.bluetooth-radio-list  input:disabled+label
+.filter-radio:disabled+label
 {
   opacity: 0.25;
 }
@@ -2075,9 +2075,8 @@ a.ranking-current:active
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
-  margin-bottom: 68px;
+  margin-bottom: 72px;
   background-color: #ebebeb;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 16px;
@@ -2095,7 +2094,7 @@ a.ranking-current:active
 .pagination-forward,
 .pagination-back
 {
-  padding: 25px 30px;
+  padding: 25px 30px 21px;
 }
 
 .pagination-forward:hover,
@@ -2118,6 +2117,7 @@ a.ranking-current:active
   flex-wrap: wrap;
   flex-basis: 90px;
   justify-content: space-between;
+  align-self: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2126,6 +2126,11 @@ a.ranking-current:active
 .pagination-forward
 {
   order: 1;
+}
+
+.pagination-back
+{
+  margin-right: 10px; /*Исключтельно для пиксельперфекта.*/
 }
 
 .pagination-pages a
