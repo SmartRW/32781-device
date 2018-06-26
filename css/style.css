@@ -1,6 +1,6 @@
 .show
 {
-  outline: 1px dashed skyblue;
+  outline: 1px dashed skyblue; /*Класс для отладки*/
 }
 
 .visually-hidden
@@ -51,7 +51,6 @@ img
 {
   position: relative;
   width: 1160px;
-  height: 206px;
   min-height: 206px;
   margin: 0 auto;
   background-image: linear-gradient(180deg, transparent 0, transparent 20px, #f7e296 20px, #f7e296 100%);
@@ -347,7 +346,6 @@ img
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 1160px;
-  height: 160px;
   min-height: 160px;
   padding: 18px 60px;
   z-index: 10;
@@ -426,9 +424,9 @@ img
   cursor: pointer;
 }
 
-#control-1:checked ~ .slider-label-list li label[for="control-1"],
-#control-2:checked ~ .slider-label-list li label[for="control-2"],
-#control-3:checked ~ .slider-label-list li label[for="control-3"]
+.control-1:checked ~ .slider-label-list li label[for="control-1"],
+.control-2:checked ~ .slider-label-list li label[for="control-2"],
+.control-3:checked ~ .slider-label-list li label[for="control-3"]
 {
   background-image: radial-gradient(transparent 1px, #000000 1px, #000000 2px, transparent 2px, transparent 100%);
 }
@@ -450,7 +448,6 @@ img
 .slides
 {
   display: none;
-  height: 490px;
   min-height: 490px;
   background-image: linear-gradient(180deg, #f7e296 0px, #f7e296 113px, #ffffff 113px, #ffffff 100%);
 }
@@ -515,16 +512,18 @@ img
 .button
 {
   display: block;
-  height: 40px;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 5px 10px;
   text-align: center;
   vertical-align: middle;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 40px;
+  /* line-height: 40px; */
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
-  background-image: linear-gradient(180deg, transparent 0, transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+  background-image: linear-gradient(180deg, transparent 0, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 40px);
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -686,7 +685,6 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   width: 1160px;
-  height: 320px;
   min-height: 320px;
   margin: 0 auto;
 }
@@ -694,9 +692,7 @@ a:active .categories-item-name
 .services-buttons-list
 {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
   width: 277px;
   margin: 0;
   margin-right: 116px;
@@ -711,13 +707,19 @@ a:active .categories-item-name
 {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.services-buttons-list li:last-child
+{
+  margin-bottom: 0;
 }
 
 .services-button
 {
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 120px;
+  box-sizing: border-box;
+  width: 160px;
+  text-align: center;
 }
 
 .services-button:hover,
@@ -726,17 +728,17 @@ a:active .categories-item-name
   background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
 }
 
-#delivery:checked ~ .services-buttons-list .services-button-delivery label,
-#guarantee:checked ~ .services-buttons-list .services-button-guarantee label,
-#credit:checked ~ .services-buttons-list .services-button-credit label
+.services-control-delivery:checked ~ .services-buttons-list .services-button-delivery label,
+.services-control-guarantee:checked ~ .services-buttons-list .services-button-guarantee label,
+.services-control-credit:checked ~ .services-buttons-list .services-button-credit label
 {
   color: #f7e184;
   background-image: linear-gradient(180deg, #000000 0, #000000 100px);
 }
 
-#delivery:checked ~ .services-buttons-list .services-button-delivery,
-#guarantee:checked ~ .services-buttons-list .services-button-guarantee,
-#credit:checked ~ .services-buttons-list .services-button-credit
+.services-control-delivery:checked ~ .services-buttons-list .services-button-delivery,
+.services-control-guarantee:checked ~ .services-buttons-list .services-button-guarantee,
+.services-control-credit:checked ~ .services-buttons-list .services-button-credit
 {
   background-color: #000000;
 }
@@ -750,9 +752,9 @@ a:active .categories-item-name
   list-style: none;
 }
 
-#delivery:checked ~ .services-list .services-delivery,
-#guarantee:checked ~ .services-list .services-guarantee,
-#credit:checked ~ .services-list .services-credit
+.services-control-delivery:checked ~ .services-list .services-delivery,
+.services-control-guarantee:checked ~ .services-list .services-guarantee,
+.services-control-credit:checked ~ .services-list .services-credit
 {
   display: block;
 }
@@ -807,13 +809,11 @@ a:active .categories-item-name
 .brand-list
 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
   width: 1160px;
-  height: 271px; /* Для IE11 */
-  min-height: 271px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 162px 10px 0;
   list-style: none;
 }
 
@@ -822,12 +822,12 @@ a:active .categories-item-name
   position: relative;
 }
 
-.brand-list a:hover .brand-logo
+.brand-item:hover .brand-logo
 {
   visibility: hidden;
 }
 
-.brand-list a:hover .brand-logo-hidden
+.brand-item:hover .brand-logo-hidden
 {
   visibility: visible;
 }
@@ -889,7 +889,8 @@ a:active .categories-item-name
 {
   margin: 0;
   margin-bottom: 30px;
-  padding-right: 75px;
+  padding-right: 85px;
+  letter-spacing: normal;
 }
 
 .contacts p
@@ -910,6 +911,8 @@ a:active .categories-item-name
 
 .delivery-list a
 {
+  position: relative;
+  padding-left: 35px;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 40px;
@@ -919,7 +922,9 @@ a:active .categories-item-name
 .delivery-list a::before
 {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: 2px;
+  top: 7px;
   width: 4px;
   height: 4px;
   margin-right: 25px;
@@ -927,20 +932,24 @@ a:active .categories-item-name
   border-radius: 50%;
 }
 
-.popup-button
+.popup-button,
+.about-us-button
 {
+  display: block;
   width: 260px;
   margin-top: auto;
-  padding: 0;
 }
 
 .popup-button:hover,
-.popup-button:focus
+.popup-button:focus,
+.about-us-button:hover,
+.about-us-button:focus
 {
   background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
 }
 
-.popup-button:active
+.popup-button:active,
+.about-us-button:active
 {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1140,7 +1149,6 @@ a:active .categories-item-name
 {
   content: "";
   width: 80px;
-  margin-right: 430px;
   border-top: 7px solid #ffc600;
 }
 
@@ -1148,8 +1156,7 @@ a:active .categories-item-name
 {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -1212,6 +1219,11 @@ a:active .categories-item-name
 .social-item a:active
 {
   opacity: 0.1;
+}
+
+.footer-copyright
+{
+  margin-left: 30px; /*Для пиксельперфекта. Социальные кнопки центруются автоматически на случай увеличения их количества*/
 }
 
 .footer-copyright::before
@@ -1294,7 +1306,6 @@ a:active .categories-item-name
   padding-left: 100px;
   padding-right: 100px;
   width: 960px;
-  height: 553px;
   min-height: 553px;
   bottom: 100px;
   left: calc(50% - 480px);
@@ -1339,12 +1350,12 @@ a:active .categories-item-name
 .feedback-message
 {
   height: 126px;
+  resize: none;
 }
 
 .feedback-button
 {
   width: 200px;
-  padding: 0;
 }
 
 .feedback-button:hover,
@@ -1483,6 +1494,7 @@ a:active .categories-item-name
 {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 4px;
   height: 9px;
   margin: 0 14px;
@@ -1538,7 +1550,7 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 70px;
+  height: 69px; /*для IE11*/
   min-height: 70px;
   justify-content: flex-end;
   align-items: center;
@@ -1770,7 +1782,6 @@ a:active .categories-item-name
 .filter-button
 {
   width: 200px;
-  padding: 0;
 }
 
 .filter-button:hover,
@@ -1791,7 +1802,6 @@ a:active .categories-item-name
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: 70px;
   min-height: 70px;
   padding-left: 73px;
   background-color: #eeeeee;
@@ -1864,6 +1874,7 @@ a.sorting-button-current:active
 .ranking-list li
 {
   display: inline-block;
+  vertical-align: top;
 }
 
 .ranking-asc
@@ -1875,6 +1886,7 @@ a.sorting-button-current:active
 .ranking-desc a
 {
   display: inline-block;
+  vertical-align: middle;
   border: 10px solid #231f20;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -2011,7 +2023,6 @@ a.ranking-current:active
 {
   width: 200px;
   margin-bottom: 5px;
-  padding: 0;
 }
 
 .buy-button:hover,
@@ -2027,7 +2038,6 @@ a.ranking-current:active
 
 .compare-button
 {
-  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 13px;

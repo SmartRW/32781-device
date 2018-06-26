@@ -79,9 +79,9 @@
       <h1 class="visually-hidden">Интернет-магазин гаждетов Девайс</h1>
       <section class="slider">
         <h2 class="visually-hidden">Горячие предложения</h2>
-        <input class="slider-control visually-hidden" type="radio" name="radio-control" id="control-1" checked>
-        <input class="slider-control visually-hidden" type="radio" name="radio-control" id="control-2">
-        <input class="slider-control visually-hidden" type="radio" name="radio-control" id="control-3">
+        <input class="slider-control control-1 visually-hidden" type="radio" name="radio-control" id="control-1" checked>
+        <input class="slider-control control-2 visually-hidden" type="radio" name="radio-control" id="control-2">
+        <input class="slider-control control-3 visually-hidden" type="radio" name="radio-control" id="control-3">
         <ul class="slider-label-list">
           <li class="slider-label">
             <label for="control-1"></label>
@@ -197,9 +197,9 @@
       <div class="services-wrapper">
         <section class="services">
           <h2 class="visually-hidden">Услуги</h2>
-          <input type="radio" class="services-control visually-hidden" name="services-switcher" id="delivery" checked>
-          <input type="radio" class="services-control visually-hidden" name="services-switcher" id="guarantee">
-          <input type="radio" class="services-control visually-hidden" name="services-switcher" id="credit">
+          <input type="radio" class="services-control services-control-delivery visually-hidden" name="services-switcher" id="delivery" checked>
+          <input type="radio" class="services-control services-control-guarantee visually-hidden" name="services-switcher" id="guarantee">
+          <input type="radio" class="services-control services-control-credit visually-hidden" name="services-switcher" id="credit">
           <ul class="services-buttons-list">
             <li class="services-button-delivery">
               <label class="services-button button" for="delivery">Доставка</label>
@@ -273,7 +273,7 @@
           </p>
           <ul class="delivery-list">
             <li>
-              <a href="#">Деловые линии</a>
+              <a href="#">Деловые Линии</a>
             </li>
             <li>
               <a href="#">Автотрейдинг</a>
@@ -282,15 +282,17 @@
               <a href="#">ЖелДорЭкспедиция</a>
             </li>
           </ul>
-          <button class="popup-button button" type="button"><span>Подробнее о нас</span></button>
+          <a class="about-us-button button" href="#"><span>Подробнее о нас</span></a>
         </section>
         <section class="contacts">
           <h2>Контакты</h2>
           <p>
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           </p>
-          <img class="contacts-map" src="img/map.jpg" width="560" height="222" alt="Магазин Device на карте">
-          <button class="popup-button button" type="button"><span>Напишите нам</span></button>
+          <a href="map.html" class="contacts-map-link">
+            <img class="contacts-map" src="img/map.jpg" width="560" height="222" alt="Магазин Device на карте">
+          </a>
+          <a class="popup-button button" href="writeus.html"><span>Напишите нам</span></a>
         </section>
       </div>
     </main>
