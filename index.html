@@ -355,8 +355,10 @@
     </div>
     <section class="modal-map">
       <h2 class="visually-hidden">Как к нам добраться</h2>
-      <img class="map-big" src="img/map-big.jpg" width="960" height="559" alt="Магазин Device на карте">
-      <button class="modal-close" type="button">Закрыть</button>
+      <div class="map-big">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebe8eb6ee5cfa91f7d94bfaed928a2e643b364fd691f3bc3e6cf38cd90a2e300&amp;source=constructor" width="960" height="560" frameborder="0">Магазин Device на карте</iframe>
+        <button class="modal-close" type="button">Закрыть</button>
+      </div>
     </section>
     <section class="modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
@@ -374,8 +376,8 @@
           <textarea class="feedback-message" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
         </div>
         <button class="feedback-button button" type="submit"><span>Отправить</span></button>
+        <button class="modal-close" type="button">Закрыть</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
