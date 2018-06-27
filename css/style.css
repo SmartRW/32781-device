@@ -1063,7 +1063,7 @@ outline: 1px dotted #000000;
 }
 
 .write-us-button:active,
-.write-us-us-button:active
+.about-us-button:active
 {
   color: rgba(0, 0, 0, 0.3);
 }
