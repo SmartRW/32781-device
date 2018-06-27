@@ -39,7 +39,7 @@ a
 
 img
 {
-  max-width: 100%;  
+  max-width: 100%;
 }
 
 /* Стили шапки */
@@ -1044,7 +1044,7 @@ outline: 1px dotted #000000;
   border-radius: 50%;
 }
 
-.popup-button,
+.write-us-button,
 .about-us-button
 {
   display: block;
@@ -1052,8 +1052,8 @@ outline: 1px dotted #000000;
   margin-top: auto;
 }
 
-.popup-button:hover,
-.popup-button:focus,
+.write-us-button:hover,
+.write-us-button:focus,
 .about-us-button:hover,
 .about-us-button:focus
 {
@@ -1062,8 +1062,8 @@ outline: 1px dotted #000000;
   background-image: linear-gradient(180deg, #f0c52e 0, #f0c52e 100px);
 }
 
-.popup-button:active,
-.about-us-button:active
+.write-us-button:active,
+.write-us-us-button:active
 {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1404,12 +1404,6 @@ outline: 1px dotted #000000;
   z-index: 10;
 }
 
-.modal-map-show
-{
-  display: block;
-  position: fixed;
-}
-
 .map-big
 {
   position: absolute;
@@ -1424,6 +1418,11 @@ outline: 1px dotted #000000;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   line-height: 0;
+}
+
+.map-big iframe
+{
+  border: none;
 }
 
 .modal-close
@@ -1465,7 +1464,7 @@ outline: 1px dotted #000000;
   z-index: 10;
 }
 
-.modal-feedback-show
+.modal-show
 {
   display: block;
   position: fixed;
