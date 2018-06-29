@@ -66,7 +66,7 @@ img
 .footer-logo
 {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   font-family: "gilroyextrabold", "Arial", sans-serif;
   font-size: 48px;
   line-height: 40px;
@@ -105,7 +105,7 @@ img
     -webkit-box-align: baseline;
        -ms-flex-align: baseline;
           align-items: baseline;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .search-form
@@ -115,14 +115,13 @@ img
   display: -ms-flexbox;
   display: flex;
   margin-right: auto;
-  padding-left: 40px;
 }
 
 .search-form::before
 {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 17px;
   left: 5px;
   width: 16px;
   height: 16px;
@@ -133,6 +132,10 @@ img
 
 .site-search
 {
+  width: 357px;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #f7e296;
   border: none;
   border-bottom-width: 2px;
@@ -142,6 +145,11 @@ img
 }
 
 .site-search:focus
+{
+  border-bottom-color: #000000;
+}
+
+.search-form:focus-within .site-search
 {
   border-bottom-color: #000000;
 }
@@ -182,8 +190,8 @@ img
 
 .search-button
 {
-  padding: 0 8px;
-  opacity: 0;
+  padding: 0 20px;
+  visibility: hidden;
   background-color: #f7e296;
   border: 2px solid #000000;
   color: #000000;
@@ -191,25 +199,29 @@ img
 
 .search-button:active span
 {
-  position: relative;
+  position: relative; /*Убирает смещение текста в IE11*/
 }
 
-.search-button:hover
+.search-button:hover,
+.search-button:focus
 {
-  opacity: 1;
+  visibility: visible;
   color: #ffffff;
   background-color: #000000;
 }
 
-.site-search:focus+.search-button,
-.search-button:focus
+.site-search:focus ~ .search-button
 {
-  opacity: 1;
+  visibility: visible;
+}
+
+.search-form:focus-within .search-button
+{
+  visibility: visible;
 }
 
 .search-button:active
 {
-  opacity: 1;
   color: rgba(255, 255, 255, 0.3);
   background-color: #000000;
 }
@@ -385,6 +397,11 @@ img
   padding: 18px 60px;
   z-index: 10;
   background-color: #f7e296;
+}
+
+.main-nav-header:focus-within .main-nav
+{
+  visibility: visible;
 }
 
 .main-nav-header:hover .main-nav,
@@ -2295,6 +2312,11 @@ a.ranking-current:active
   position: relative;
   margin-bottom: 13px;
   margin-top: 10px;
+}
+
+.products-item:focus-within .item-container
+{
+  visibility: visible;
 }
 
 .products-item:hover .item-container
