@@ -456,20 +456,25 @@ img
 .slider-label label
 {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  padding: 3px;
   border: 1px solid #000000;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.control-1:checked ~ .slider-label-list li label[for="control-1"],
-.control-2:checked ~ .slider-label-list li label[for="control-2"],
-.control-3:checked ~ .slider-label-list li label[for="control-3"]
+.control-1:checked ~ .slider-label-list li label[for="control-1"]::after,
+.control-2:checked ~ .slider-label-list li label[for="control-2"]::after,
+.control-3:checked ~ .slider-label-list li label[for="control-3"]::after
 {
-  background-image: -webkit-radial-gradient(transparent 1px, #000000 1px, #000000 2px, transparent 2px, transparent 100%);
-  background-image: -o-radial-gradient(transparent 1px, #000000 1px, #000000 2px, transparent 2px, transparent 100%);
-  background-image: radial-gradient(transparent 1px, #000000 1px, #000000 2px, transparent 2px, transparent 100%);
+  content: "";
+  display: block;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #000000;
+  border-radius: 50%;
 }
 
 .control-1:focus ~ .slider-label-list li label[for="control-1"],
@@ -1468,7 +1473,7 @@ outline: 1px dotted #000000;
 
 .modal-show
 {
-  display: block;  
+  display: block;
 }
 
 .feedback-form
@@ -2345,7 +2350,7 @@ a.ranking-current:active
   line-height: 60px;
   letter-spacing: 0.05em;
   color: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 /* Стили пагинации  */
