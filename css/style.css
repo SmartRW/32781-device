@@ -458,7 +458,8 @@ img
   display: block;
   width: 12px;
   height: 12px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 3px;
   border: 1px solid #000000;
   border-radius: 50%;
@@ -1417,7 +1418,7 @@ outline: 1px dotted #000000;
   top: 100px;
   margin-left: -480px;
   background-color: #ececec;
-  background-image: url(../img/map-big.jpg);
+  background-image: url(../img/map-big.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 960px 560px;
@@ -1474,6 +1475,26 @@ outline: 1px dotted #000000;
 .modal-show
 {
   display: block;
+  -webkit-animation-name: popup;
+          animation-name: popup;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.modal-shake
+{
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 50ms;
+          animation-duration: 50ms;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
 }
 
 .feedback-form
@@ -1614,6 +1635,66 @@ outline: 1px dotted #000000;
 {
   color: rgba(70, 70, 70, 0.4);
   letter-spacing: normal;
+}
+
+@-webkit-keyframes popup
+{
+  from
+  {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to
+  {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popup
+{
+  from
+  {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to
+  {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake
+{
+  from
+  {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to
+  {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+@keyframes shake
+{
+  from
+  {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to
+  {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
 }
 
 /* стили внутренней страницы */
@@ -2350,7 +2431,7 @@ a.ranking-current:active
   line-height: 60px;
   letter-spacing: 0.05em;
   color: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 /* Стили пагинации  */
