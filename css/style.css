@@ -2125,8 +2125,8 @@ outline: 1px dotted #000000;
   cursor: pointer;
 }
 
-.min-price:hover,
-.max-price:hover
+.min-price:active,
+.max-price:active
 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
